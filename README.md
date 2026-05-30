@@ -176,7 +176,7 @@ p{line-height:1.65;font-size:10.5pt;color:#cfcfcf;margin-bottom:14px;text-align:
     <div class="big-logo-wrap">
       <div class="logo-ring"></div>
       <div class="logo-ring r2"></div>
-      <img class="umbrella-logo" src="https://i.postimg.cc/NKQfh1pm/IMG-20260530-102835.png" alt="Umbrella Logo">
+      <img class="umbrella-logo" src="https://raw.githubusercontent.com/aceofwalls2/Yes/refs/heads/main/IMG_20260530_102835.png" alt="Umbrella Logo">
     </div>
     <div class="brand"><span class="b">U</span>MBRELLA</div>
     <div class="tagline">OUR BUSINESS IS LIFE ITSELF</div>
