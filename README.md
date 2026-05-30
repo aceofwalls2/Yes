@@ -77,6 +77,26 @@ body,html{margin:0;padding:0;height:100%;background:var(--bg-black);color:var(--
 .btn-submit:hover{background:var(--primary-red);color:#fff;box-shadow:0 0 18px var(--primary-red);}
 .hint{font-size:8pt;color:#4a4a4a;margin-top:12px;text-align:center;letter-spacing:1px;}
 
+/* ---- SECURITY WARNING OVERLAY CSS ---- */
+.security-warning-box {
+  margin-top: 20px;
+  border: 1px solid var(--primary-red);
+  background: rgba(204, 0, 0, 0.05);
+  padding: 12px 16px;
+  font-size: 7.5pt;
+  color: #a0a0a0;
+  line-height: 1.5;
+  text-align: justify;
+  letter-spacing: 0.5px;
+  position: relative;
+}
+.security-warning-box strong {
+  color: var(--bright-red);
+  letter-spacing: 1px;
+  display: block;
+  margin-bottom: 4px;
+}
+
 /* ---- DASHBOARD ---- */
 #main-system{display:none;height:100%;grid-template-columns:310px 1fr 330px;}
 .sidebar{background:var(--terminal-gray);border-right:1px solid #333;display:flex;flex-direction:column;}
@@ -180,7 +200,13 @@ p{line-height:1.65;font-size:10.5pt;color:#cfcfcf;margin-bottom:14px;text-align:
       </div>
       <button class="btn-submit" onclick="validateLogin()">&gt;&gt; AUTHENTICATE</button>
       <div id="error-msg" style="color:var(--bright-red);font-size:9.5pt;margin-top:14px;text-align:center;min-height:15px;letter-spacing:1px;"></div>
-      <div class="hint">CLEARANCE LEVEL 7 (OMEGA) REQUIRED &nbsp;//&nbsp; FILE PV-001 &nbsp;//&nbsp; ALL ATTEMPTS LOGGED</div>
+      
+      <!-- ADDED SECURITY WARNING BOX -->
+      <div class="security-warning-box">
+        <strong>SECURITY WARNING:</strong> Anything viewed beyond this screen is covered under the Umbrella Corporation Security Agreement. Unauthorized use, tampering or recording will be punished under Umbrella Corporation's Treason and Terrorism Directive (Article 12, Paragraph 19, Section C).
+      </div>
+      
+      <div class="hint" style="margin-top:18px;">CLEARANCE LEVEL 7 (OMEGA) REQUIRED &nbsp;//&nbsp; FILE PV-001 &nbsp;//&nbsp; ALL ATTEMPTS LOGGED</div>
     </div>
   </div>
 </div>
@@ -498,10 +524,6 @@ const randomLogs=[
   {t:"[NET] Hound Wolf Squad beacon detected.",k:"normal"},
   {t:"[WARN] Subject MARIE signature lost in dark zone.",k:"warn"}
 ];
-function addLog(text,type="normal"){ const p=document.createElement('div'); p.className='log-line';
-  const time=new Date().toLocaleTimeString('en-US',{hour12:false});
-  p.innerHTML=`<span class="timestamp">[${time}]</span> <span class="${type}">${text}</span>`;
-  logContent.appendChild(p); while(logContent.children.length>26) logContent.removeChild(logContent.firstChild); }
 function startLiveLog(){ addLog("Terminal access granted to "+VALID_USER+".","success");
   addLog("Case file REQUIEM decrypted.","success"); addLog("Clearance LEVEL 7 (OMEGA) verified.","success");
   setInterval(()=>{ if(Math.random()>0.55){ const l=randomLogs[Math.floor(Math.random()*randomLogs.length)]; addLog(l.t,l.k); } },2400); }
