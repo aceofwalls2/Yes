@@ -176,12 +176,7 @@ p{line-height:1.65;font-size:10.5pt;color:#cfcfcf;margin-bottom:14px;text-align:
     <div class="big-logo-wrap">
       <div class="logo-ring"></div>
       <div class="logo-ring r2"></div>
-      <svg class="umbrella-logo" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-        <polygon points="30,4 70,4 96,30 96,70 70,96 30,96 4,70 4,30" fill="#fff" stroke="#cc0000" stroke-width="2.5"/>
-        <polygon points="50,50 30,4 70,4" fill="#cc0000"/><polygon points="50,50 96,30 96,70" fill="#cc0000"/>
-        <polygon points="50,50 70,96 30,96" fill="#cc0000"/><polygon points="50,50 4,70 4,30" fill="#cc0000"/>
-        <rect x="46" y="6" width="8" height="88" fill="#fff"/><rect x="6" y="46" width="88" height="8" fill="#fff"/>
-      </svg>
+      <img class="umbrella-logo" src="https://i.postimg.cc/NKQfh1pm/IMG-20260530-102835.png" alt="Umbrella Logo">
     </div>
     <div class="brand"><span class="b">U</span>MBRELLA</div>
     <div class="tagline">OUR BUSINESS IS LIFE ITSELF</div>
